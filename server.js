@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json())
  
 require('./app/routes/students.routes.js')(app);
+require('./app/routes/courses.routes.js')(app);
+require('./app/routes/grades.routes.js')(app);
+ 
  
 // Create a Server
 var server = app.listen(8081, function () {
